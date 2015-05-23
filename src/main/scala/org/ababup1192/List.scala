@@ -23,9 +23,24 @@ object List {
     case Cons(x, xs) => x * product(xs)
   }
 
+  def tail[A](list: List[A]): List[A] = {
+    list match {
+      case Nil => sys.error("Nil can't return tail")
+      case Cons(h, tail) => tail
+    }
+  }
+
+  def setHead[A](list: List[A], value: A): List[A] = {
+    list match {
+      case Nil => sys.error("Nil can't return tail")
+      case Cons(h, tail) => Cons(value, tail)
+    }
+  }
+
   // A*で可変長引数(Array)もConsに併せて headとtailに分けて再帰的に取り出していく。
-  def apply[A](as: A*): List[A] =
+  def apply[A](as: A*): List[A] = {
     if (as.isEmpty) Nil
     // Array等を連続パラメータに渡す時は : _* と明示する必要がある。
     else Cons(as.head, apply(as.tail: _*))
+  }
 }
