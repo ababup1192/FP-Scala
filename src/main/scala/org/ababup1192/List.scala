@@ -26,16 +26,25 @@ object List {
   def tail[A](list: List[A]): List[A] = {
     list match {
       case Nil => sys.error("Nil can't return tail")
-      case Cons(h, tail) => tail
+      case Cons(h, t) => t
     }
   }
 
-  def setHead[A](list: List[A], value: A): List[A] = {
-    list match {
-      case Nil => sys.error("Nil can't return tail")
-      case Cons(h, tail) => Cons(value, tail)
+  def drop[A](list: List[A], n: Int): List[A] = {
+    if (n <= 0) list
+    else list match {
+      case Nil => Nil
+      case (Cons(_, t)) => drop(t, n - 1)
     }
   }
+
+  def setHead[A](list: List[A], v: A): List[A] = {
+    list match {
+      case Nil => sys.error("Nil can't return tail")
+      case Cons(h, t) => Cons(v, t)
+    }
+  }
+
 
   // A*で可変長引数(Array)もConsに併せて headとtailに分けて再帰的に取り出していく。
   def apply[A](as: A*): List[A] = {
