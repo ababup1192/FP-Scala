@@ -23,6 +23,14 @@ class ListSpec extends FlatSpec with Matchers {
     List.product(List(1.0, 2.0, 3.0, 4.0)) should be === 24.0
   }
 
+  "The tail function" should "return new List" in {
+    List.tail(List(1, 2, 3)) should be === List(2, 3)
+  }
+
+  "The setHead function" should "return new List" in {
+    List.setHead(List(1, 2, 3), 5) should be === List(5, 2, 3)
+  }
+
 
 }
 
