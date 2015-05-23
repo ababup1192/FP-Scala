@@ -4,6 +4,7 @@
     <list default="true" id="49086f54-f520-41d4-aa2b-85994b985348" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$USER_HOME$/.vimrc" afterPath="$USER_HOME$/.vimrc" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/.zshrc" afterPath="$USER_HOME$/.zshrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala" />
     </list>
     <ignored path="FP-Scala.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +21,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/FP-Scala$ListSpec.coverage" NAME="ListSpec Coverage Results" MODIFIED="1432353536289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/FP-Scala$ListSpec.coverage" NAME="ListSpec Coverage Results" MODIFIED="1432379388087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -38,21 +39,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="List.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="List.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6263048">
-              <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListSpec.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ListSpec.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.955414">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,8 +77,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/scala/ababup1192/List.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/HelloSpec.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala" />
       </list>
     </option>
   </component>
@@ -614,12 +615,12 @@
       <updated>1431347058378</updated>
       <workItem from="1431347061286" duration="4068000" />
       <workItem from="1432335528943" duration="4334000" />
-      <workItem from="1432376933317" duration="2165000" />
+      <workItem from="1432376933317" duration="2580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10567000" />
+    <option name="totallyTimeSpent" value="10982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="23" width="1351" height="874" extended-state="0" />
@@ -633,19 +634,19 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925898" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28385615" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34061697" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28342247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3399471" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -682,18 +683,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6263048">
-          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.955414">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
