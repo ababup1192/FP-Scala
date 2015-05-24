@@ -31,6 +31,10 @@ object List {
     foldLeft(list, 0)((l, _) => l + 1)
   }
 
+  def reverse[A](list: List[A]): List[A] = {
+    foldLeft(list, List(): List[A])((l, r) => Cons(r, l))
+  }
+
   // head と tail の構造になってるので、再帰的に演算が可能
   def sum(list: List[Int]): Int = {
     foldLeft(list, 0)(_ + _)

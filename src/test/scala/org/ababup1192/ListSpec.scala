@@ -35,6 +35,11 @@ class ListSpec extends FlatSpec with Matchers {
     List.length(List(1, 2, 3, 4)) should be(4)
   }
 
+
+  "The reverse function" should "return a new list" in {
+    List.reverse(List(1, 2, 3)) should be(List(3, 2, 1))
+  }
+
   "The dropWhile function" should "return new List" in {
     List.dropWhile(List(8, 9, 10, 11, 12, 13))(_ < 10) should be(List(10, 11, 12, 13))
   }
