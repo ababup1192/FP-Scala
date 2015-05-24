@@ -1,36 +1,29 @@
 package org.ababup1192
 
 sealed trait Tree[+A] {
-  def size(): Int = this match {
-    case Leaf(_) => 1
-    case Branch(l, r) => 1 + l.size() + r.size()
+
+  def fold[B](fl: A => B)(fb: (B, B) => B): B = {
+    this match {
+      case Leaf(v) => fl(v)
+      case Branch(l, r) => fb(l.fold(fl)(fb), r.fold(fl)(fb))
+    }
+  }
+
+  def size(): Int = {
+    this.fold(a => 1)(1 + _ + _)
   }
 
   def depth(): Int = {
-    this match {
-      case Leaf(_) => 0
-      case Branch(l, r) => 1 + (l.depth() max r.depth())
-    }
+    this.fold(a => 0)((l, r) => 1 + (l max r))
   }
 
   def map[B](f: A => B): Tree[B] = {
-    this match {
-      case Leaf(v) => Leaf(f(v))
-      case Branch(l, r) => Branch(l.map(f), r.map(f))
-    }
+    this.fold(a => Leaf(f(a)): Tree[B])(Branch(_, _))
   }
 
-}
-
-object Tree {
-  def maximum(tree: Tree[Int]): Int = {
-    tree match {
-      case Leaf(v) => v
-      case Branch(l, r) => maximum(l) max maximum(r)
-    }
+  def maximum[B >: A](f: (B, B) => B): B = {
+    this.fold((a: B) => a)(f(_, _))
   }
-
-
 }
 
 case class Leaf[A](value: A) extends Tree[A]
