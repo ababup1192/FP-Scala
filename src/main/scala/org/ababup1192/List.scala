@@ -78,6 +78,13 @@ object List {
     foldRight(list, List(): List[B])((l, r) => Cons(f(l), r))
   }
 
+  def filter[A](list: List[A])(f: A => Boolean): List[A] = {
+    foldRight(list, List(): List[A])((l, r) => {
+      if (f(l)) Cons(l, r)
+      else r
+    })
+  }
+
   def plusOne(list: List[Int]): List[Int] = {
     map(list)(_ + 1)
   }

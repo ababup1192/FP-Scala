@@ -60,6 +60,11 @@ class ListSpec extends FlatSpec with Matchers {
     List.double2String(List(1.0, 2.0, 3.0)) should be(List("1.0", "2.0", "3.0"))
   }
 
+  "The filter function" should "return new List" in {
+    List.filter(List(1, 2, 3, 4, 5, 6, 7, 8))(_ % 2 == 0) should be(List(2, 4, 6, 8))
+  }
+
+
   "The init function" should "return new list" in {
     List.init(List(1, 2, 3, 4)) should be(List(1, 2, 3))
   }
