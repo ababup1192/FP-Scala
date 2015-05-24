@@ -31,6 +31,10 @@ class ListSpec extends FlatSpec with Matchers {
     List.drop(List(1, 2, 3), 1) should be(List(2, 3))
   }
 
+  "The length function" should "return size of list" in {
+    List.length(List(1, 2, 3, 4)) should be(4)
+  }
+
   "The dropWhile function" should "return new List" in {
     List.dropWhile(List(8, 9, 10, 11, 12, 13))(_ < 10) should be(List(10, 11, 12, 13))
   }

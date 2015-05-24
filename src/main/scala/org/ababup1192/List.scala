@@ -20,6 +20,10 @@ object List {
     }
   }
 
+  def length[A](list: List[A]): Int = {
+    foldRight(list, 0)((_, r) => 1 + r)
+  }
+
   // head と tail の構造になってるので、再帰的に演算が可能
   def sum(list: List[Int]): Int = {
     foldRight(list, 0)(_ + _)
