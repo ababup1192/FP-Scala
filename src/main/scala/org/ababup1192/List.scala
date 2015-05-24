@@ -83,10 +83,7 @@ object List {
   }
 
   def filter[A](list: List[A])(f: A => Boolean): List[A] = {
-    foldRight(list, List(): List[A])((l, r) => {
-      if (f(l)) Cons(l, r)
-      else r
-    })
+    flatMap(list)(x => if (f(x)) List(x) else List())
   }
 
   def plusOne(list: List[Int]): List[Int] = {
