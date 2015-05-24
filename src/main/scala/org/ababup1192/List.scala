@@ -11,16 +11,22 @@ case object Nil extends List[Nothing]
 case class Cons[+A](head: A, tail: List[A]) extends List[A]
 
 object List {
-  // head と tail の構造になってるので、再帰的に演算が可能
-  def sum(ints: List[Int]): Int = ints match {
-    case Nil => 0
-    case Cons(x, xs) => x + sum(xs)
+
+
+  def foldRight[A, B](list: List[A], res: B)(f: (A, B) => B): B = {
+    list match {
+      case Nil => res
+      case Cons(x, xs) => f(x, foldRight(xs, res)(f))
+    }
   }
 
-  def product(ds: List[Double]): Double = ds match {
-    case Nil => 1.0
-    case Cons(0.0, _) => 0.0
-    case Cons(x, xs) => x * product(xs)
+  // head と tail の構造になってるので、再帰的に演算が可能
+  def sum(list: List[Int]): Int = {
+    foldRight(list, 0)(_ + _)
+  }
+
+  def product(list: List[Double]): Double = {
+    foldRight(list, 1.0)(_ * _)
   }
 
   def tail[A](list: List[A]): List[A] = {
