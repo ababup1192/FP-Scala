@@ -95,6 +95,15 @@ object List {
     }
   }
 
+  def hasSubsequence[A](sup: List[A], sub: List[A]): Boolean = {
+    (sup, sub) match {
+      case (Nil, Nil) => true
+      case (_, Nil) => true
+      case (Nil, _) => false
+      case (Cons(x, xs), Cons(y, ys)) => if(x == y) hasSubsequence(xs, ys) else hasSubsequence(xs, sub)
+    }
+  }
+
   def plusOne(list: List[Int]): List[Int] = {
     map(list)(_ + 1)
   }

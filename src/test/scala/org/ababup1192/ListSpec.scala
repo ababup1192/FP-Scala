@@ -80,6 +80,13 @@ class ListSpec extends FlatSpec with Matchers {
     List.setHead(List(1, 2, 3), 5) should be(List(5, 2, 3))
   }
 
+  "The hasSubsequence function" should "find sub sequence" in {
+    List.hasSubsequence(List(1, 2, 3, 4), List(1, 2)) should be(right = true)
+    List.hasSubsequence(List(1, 2, 3, 4), List(2, 3)) should be(right = true)
+    List.hasSubsequence(List(1, 2, 3, 4), List(4)) should be(right = true)
+    List.hasSubsequence(List(1, 2, 3, 4), List(5)) should be(right = false)
+  }
+
 }
 
 
