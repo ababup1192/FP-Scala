@@ -74,6 +74,11 @@ object List {
     foldRight(list1, list2)((l, r) => Cons(l, r))
   }
 
+  def plusOne(list: List[Int]): List[Int] = {
+    foldRight(list, List(): List[Int])((l, r) => Cons(l + 1, r))
+  }
+
+
 
   def init[A](list: List[A]): List[A] = {
     list match {

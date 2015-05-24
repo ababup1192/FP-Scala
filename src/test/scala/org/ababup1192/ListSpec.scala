@@ -52,6 +52,10 @@ class ListSpec extends FlatSpec with Matchers {
     List.concat(List(List(1, 2, 3), List(4, 5, 6), List(7, 8, 9))) should be(List(1, 2, 3, 4, 5, 6, 7, 8, 9))
   }
 
+  "The plusOne function" should "return new list" in {
+    List.plusOne(List(1, 2, 3, 4, 5)) should be(List(2, 3, 4, 5, 6))
+  }
+
   "The init function" should "return new list" in {
     List.init(List(1, 2, 3, 4)) should be(List(1, 2, 3))
   }
