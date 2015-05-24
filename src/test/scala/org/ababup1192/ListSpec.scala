@@ -68,6 +68,10 @@ class ListSpec extends FlatSpec with Matchers {
     List.flatMap(List(1, 2, 3))(i => List(i, i)) should be(List(1, 1, 2, 2, 3, 3))
   }
 
+  "The zipWith function" should "return new List" in {
+    List.zipWith(List(1,2,3), List(4,5,6)) should be(List(5,7,9))
+  }
+
   "The init function" should "return new list" in {
     List.init(List(1, 2, 3, 4)) should be(List(1, 2, 3))
   }

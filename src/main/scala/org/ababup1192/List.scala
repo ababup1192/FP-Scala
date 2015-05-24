@@ -86,6 +86,15 @@ object List {
     flatMap(list)(x => if (f(x)) List(x) else List())
   }
 
+  def zipWith(list1: List[Int], list2: List[Int]): List[Int] = {
+    (list1, list2) match {
+      case (Nil, Nil) => Nil
+      case (Nil, _) => Nil
+      case (_, Nil) => Nil
+      case (Cons(x, xs), Cons(y, ys)) => Cons(x + y, zipWith(xs, ys))
+    }
+  }
+
   def plusOne(list: List[Int]): List[Int] = {
     map(list)(_ + 1)
   }
