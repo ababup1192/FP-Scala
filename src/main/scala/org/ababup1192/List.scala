@@ -52,6 +52,14 @@ object List {
     }
   }
 
+  def init[A](list: List[A]): List[A] = {
+    list match {
+      case Nil => Nil
+      case Cons(h, Nil) => Nil
+      case Cons(h, t) => Cons(h, init(t))
+    }
+  }
+
   def setHead[A](list: List[A], v: A): List[A] = {
     list match {
       case Nil => sys.error("Nil can't return tail")
