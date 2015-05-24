@@ -31,6 +31,10 @@ class ListSpec extends FlatSpec with Matchers {
     List.drop(List(1, 2, 3), 1) should be(List(2, 3))
   }
 
+  "The dropWhile function" should "return new List" in {
+    List.dropWhile(List(8, 9, 10, 11, 12, 13), (x: Int) => x < 10) should be(List(10, 11, 12, 13))
+  }
+
   "The setHead function" should "return new List" in {
     List.setHead(List(1, 2, 3), 5) should be(List(5, 2, 3))
   }
