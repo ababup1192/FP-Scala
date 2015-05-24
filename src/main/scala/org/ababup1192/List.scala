@@ -74,12 +74,16 @@ object List {
     foldRight(list1, list2)((l, r) => Cons(l, r))
   }
 
+  def map[A, B](list: List[A])(f: A => B): List[B] = {
+    foldRight(list, List(): List[B])((l, r) => Cons(f(l), r))
+  }
+
   def plusOne(list: List[Int]): List[Int] = {
-    foldRight(list, List(): List[Int])((l, r) => Cons(l + 1, r))
+    map(list)(_ + 1)
   }
 
   def double2String(list: List[Double]): List[String] = {
-    foldRight(list, List(): List[String])((l, r) => Cons(l.toString, r))
+    map(list)(_.toString)
   }
 
   def init[A](list: List[A]): List[A] = {
