@@ -7,6 +7,15 @@ sealed trait Tree[+A] {
   }
 }
 
+object Tree {
+  def maximum(tree: Tree[Int]): Int = {
+    tree match {
+      case Leaf(v) => v
+      case Branch(l, r) => maximum(l) max maximum(r)
+    }
+  }
+}
+
 case class Leaf[A](value: A) extends Tree[A]
 
 case class Branch[A](left: Tree[A], right: Tree[A]) extends Tree[A]
