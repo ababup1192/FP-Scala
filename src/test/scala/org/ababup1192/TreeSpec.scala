@@ -16,7 +16,7 @@ class TreeSpec extends FlatSpec with Matchers {
 
   "The depth function" should "return a longest path of tree" in {
     val tree = Branch(Leaf(1), Branch(Leaf(2), Branch(Branch(Leaf(3), Leaf(4)), Leaf(5))))
-    Tree.depth(tree) should be(4)
+    tree.depth() should be(4)
   }
 
 }

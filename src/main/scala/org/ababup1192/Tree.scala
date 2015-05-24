@@ -5,6 +5,14 @@ sealed trait Tree[+A] {
     case Leaf(_) => 1
     case Branch(l, r) => 1 + l.size() + r.size()
   }
+
+  def depth(): Int = {
+    this match {
+      case Leaf(_) => 0
+      case Branch(l, r) => 1 + (l.depth() max r.depth())
+    }
+  }
+
 }
 
 object Tree {
@@ -15,12 +23,6 @@ object Tree {
     }
   }
 
-  def depth[A](tree: Tree[A]): Int = {
-    tree match {
-      case Leaf(_) => 0
-      case Branch(l, r) => 1 + (depth(l) max depth(r))
-    }
-  }
 
 }
 
