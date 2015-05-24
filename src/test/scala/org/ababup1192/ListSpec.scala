@@ -56,6 +56,10 @@ class ListSpec extends FlatSpec with Matchers {
     List.plusOne(List(1, 2, 3, 4, 5)) should be(List(2, 3, 4, 5, 6))
   }
 
+  "The double2String function" should "return new String list" in {
+    List.double2String(List(1.0, 2.0, 3.0)) should be(List("1.0", "2.0", "3.0"))
+  }
+
   "The init function" should "return new list" in {
     List.init(List(1, 2, 3, 4)) should be(List(1, 2, 3))
   }

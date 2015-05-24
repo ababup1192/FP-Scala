@@ -78,7 +78,9 @@ object List {
     foldRight(list, List(): List[Int])((l, r) => Cons(l + 1, r))
   }
 
-
+  def double2String(list: List[Double]): List[String] = {
+    foldRight(list, List(): List[String])((l, r) => Cons(l.toString, r))
+  }
 
   def init[A](list: List[A]): List[A] = {
     list match {
