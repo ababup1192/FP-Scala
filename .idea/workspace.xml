@@ -20,7 +20,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/FP-Scala$ListSpec.coverage" NAME="ListSpec Coverage Results" MODIFIED="1432445033620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/FP-Scala$ListSpec.coverage" NAME="ListSpec Coverage Results" MODIFIED="1432446797395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -41,8 +41,8 @@
       <file leaf-file-name="List.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6369427">
-              <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.25477707">
+              <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+              <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -76,8 +76,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/scala/ababup1192/List.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/HelloSpec.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala" />
       </list>
     </option>
   </component>
@@ -97,7 +97,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="89" />
-    <option name="y" value="22" />
+    <option name="y" value="31" />
     <option name="width" value="1351" />
     <option name="height" value="874" />
   </component>
@@ -615,15 +615,15 @@
       <workItem from="1431347061286" duration="4068000" />
       <workItem from="1432335528943" duration="4334000" />
       <workItem from="1432376933317" duration="3840000" />
-      <workItem from="1432433529511" duration="9499000" />
+      <workItem from="1432433529511" duration="11405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21741000" />
+    <option name="totallyTimeSpent" value="23647000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="22" width="1351" height="874" extended-state="0" />
+    <frame x="89" y="31" width="1351" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -710,15 +710,15 @@
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+          <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6369427">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.25477707">
+          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
           <folding />
         </state>
       </provider>

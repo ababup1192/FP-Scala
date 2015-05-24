@@ -66,12 +66,14 @@ object List {
     }
   }
 
-  def append[A](list1: List[A], list2: List[A]): List[A] = {
-    list1 match {
-      case Nil => list2
-      case Cons(h, t) => Cons(h, append(t, list2))
-    }
+  def concat[A](lists: List[List[A]]): List[A] = {
+    foldLeft(lists, List(): List[A])((l, r) => append(l, r))
   }
+
+  def append[A](list1: List[A], list2: List[A]): List[A] = {
+    foldRight(list1, list2)((l, r) => Cons(l, r))
+  }
+
 
   def init[A](list: List[A]): List[A] = {
     list match {
@@ -87,7 +89,6 @@ object List {
       case Cons(h, t) => Cons(v, t)
     }
   }
-
 
   // A*で可変長引数(Array)もConsに併せて headとtailに分けて再帰的に取り出していく。
   def apply[A](as: A*): List[A] = {
