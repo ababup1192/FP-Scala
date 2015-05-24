@@ -28,16 +28,16 @@ object List {
   }
 
   def length[A](list: List[A]): Int = {
-    foldRight(list, 0)((_, r) => 1 + r)
+    foldLeft(list, 0)((l, _) => l + 1)
   }
 
   // head と tail の構造になってるので、再帰的に演算が可能
   def sum(list: List[Int]): Int = {
-    foldRight(list, 0)(_ + _)
+    foldLeft(list, 0)(_ + _)
   }
 
   def product(list: List[Double]): Double = {
-    foldRight(list, 1.0)(_ * _)
+    foldLeft(list, 1.0)(_ * _)
   }
 
   def tail[A](list: List[A]): List[A] = {
