@@ -45,6 +45,13 @@ object List {
     }
   }
 
+  def append[A](list1: List[A], list2: List[A]): List[A] = {
+    list1 match {
+      case Nil => list2
+      case Cons(h, t) => Cons(h, append(t, list2))
+    }
+  }
+
   def setHead[A](list: List[A], v: A): List[A] = {
     list match {
       case Nil => sys.error("Nil can't return tail")

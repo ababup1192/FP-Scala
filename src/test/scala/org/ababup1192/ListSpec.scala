@@ -35,6 +35,9 @@ class ListSpec extends FlatSpec with Matchers {
     List.dropWhile(List(8, 9, 10, 11, 12, 13), (x: Int) => x < 10) should be(List(10, 11, 12, 13))
   }
 
+  "The append function" should "connect two lists" in {
+    List.append(List(1, 2, 3), List(4, 5, 6)) should be(List(1, 2, 3, 4, 5, 6))
+  }
   "The setHead function" should "return new List" in {
     List.setHead(List(1, 2, 3), 5) should be(List(5, 2, 3))
   }
