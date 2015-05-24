@@ -19,6 +19,11 @@ class TreeSpec extends FlatSpec with Matchers {
     tree.depth() should be(4)
   }
 
+  "The map function" should "return a new Tree" in {
+    val tree = Branch(Branch(Leaf(1), Leaf(2)), Branch(Leaf(3), Leaf(4)))
+    tree.map(_ * 2) should be(Branch(Branch(Leaf(2), Leaf(4)), Branch(Leaf(6), Leaf(8))))
+  }
+
 }
 
 

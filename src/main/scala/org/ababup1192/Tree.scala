@@ -13,6 +13,13 @@ sealed trait Tree[+A] {
     }
   }
 
+  def map[B](f: A => B): Tree[B] = {
+    this match {
+      case Leaf(v) => Leaf(f(v))
+      case Branch(l, r) => Branch(l.map(f), r.map(f))
+    }
+  }
+
 }
 
 object Tree {
