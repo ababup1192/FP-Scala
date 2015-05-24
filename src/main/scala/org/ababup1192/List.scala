@@ -20,6 +20,13 @@ object List {
     }
   }
 
+  def foldLeft[A, B](list: List[A], res: B)(f: (B, A) => B): B = {
+    list match {
+      case Nil => res
+      case Cons(x, xs) => foldLeft(xs, f(res, x))(f)
+    }
+  }
+
   def length[A](list: List[A]): Int = {
     foldRight(list, 0)((_, r) => 1 + r)
   }
