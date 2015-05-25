@@ -45,6 +45,12 @@ class OptionSpec extends FlatSpec with Matchers {
     overTen(11).map(_ * 3).filter(_ % 2 == 0) should be(None)
   }
 
+  "The variance function" should "return a new Int value" in {
+    variance(Seq(50, 50, 50)) should be(Some(0))
+    variance(Seq()) should be(None)
+    variance(Seq(0, 0, 0)) should be(Some(0))
+  }
+
 
 }
 

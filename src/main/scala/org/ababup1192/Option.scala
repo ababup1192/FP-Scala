@@ -10,7 +10,7 @@ sealed trait Option[+A] {
   }
 
   def flatMap[B](f: A => Option[B]): Option[B] = {
-    this.map(f(_)).getOrElse(None)
+    map(f(_)).getOrElse(None)
   }
 
   def getOrElse[B >: A](default: => B): B = {
@@ -21,12 +21,12 @@ sealed trait Option[+A] {
   }
 
   def orElse[B >: A](ob: => Option[B]): Option[B] = {
-    this.map(Some(_)).getOrElse(ob)
+    map(Some(_)).getOrElse(ob)
   }
 
   def filter(f: A => Boolean): Option[A] = {
-    this.flatMap { x =>
-      if (f(x)) Some(x)
+    flatMap { a =>
+      if (f(a)) Some(a)
       else None
     }
   }
@@ -43,5 +43,14 @@ object Option {
   def mean(xs: Seq[Double]): Option[Double] = {
     if (xs.isEmpty) None
     else Some(xs.sum / xs.length)
+  }
+
+  def variance(xs: Seq[Double]): Option[Double] = {
+    if (xs.isEmpty) {
+      None
+    } else {
+      val avg = xs.sum / xs.length
+      Some(xs.map(x => Math.pow(x - avg, 2)).sum / xs.length)
+    }
   }
 }
