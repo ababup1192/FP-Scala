@@ -26,6 +26,12 @@ class FuncModuleSpec extends FlatSpec with Matchers {
     findFirst(Array(1, 2, 3), (elm: Int) => elm == 4) should be(-1)
   }
 
+  "The isSorted function" should "return a Boolean value" in {
+    isSorted(Array(1, 2, 3, 4), (a: Int, b: Int) => a < b) should be(right = true)
+    isSorted(Array(1, 3, 2), (a: Int, b: Int) => a < b) should be(right = false)
+    isSorted(Array(1, 3, 2, 4), (a: Int, b: Int) => a < b) should be(right = false)
+  }
+
 }
 
 
