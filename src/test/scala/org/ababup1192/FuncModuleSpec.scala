@@ -21,6 +21,11 @@ class FuncModuleSpec extends FlatSpec with Matchers {
     fib(5) should be(5)
   }
 
+  "The findFirst function" should "return Int value" in {
+    findFirst(Array("hoge", "foo", "bar"), "foo") should be(1)
+    findFirst(Array("hoge", "foo", "bar"), "huga") should be(-1)
+  }
+
 }
 
 

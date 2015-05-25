@@ -26,4 +26,14 @@ object FuncModule {
     loop(n, 0, 1)
   }
 
+  def findFirst(ss: Array[String], key: String): Int = {
+    @tailrec
+    def loop(n: Int): Int = {
+      if (n >= ss.length) -1
+      else if (ss(n) == key) n
+      else loop(n + 1)
+    }
+    loop(0)
+  }
+
 }
