@@ -51,6 +51,12 @@ class OptionSpec extends FlatSpec with Matchers {
     variance(Seq(0, 0, 0)) should be(Some(0))
   }
 
+  "The parseInsuranceRateQuote function" should "return a new Option[Double] value" in {
+    parseInsuranceRateQuote("12", "13") should be(Some(12 * 13 * 0.1))
+    parseInsuranceRateQuote("age", "13") should be(None)
+    parseInsuranceRateQuote("12", "num") should be(None)
+  }
+
 
 }
 
