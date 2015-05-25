@@ -24,11 +24,19 @@ class OptionSpec extends FlatSpec with Matchers {
     overTen(5).flatMap(x => Some(x * 2)) should be(None)
   }
 
-  /*
-  "The flatMap function" should "return a new Option value" in {
-    Some(10).map(_ * 2) should be(Some(20))
+  "The getOrElse function" should "return a new value" in {
+    def overTen(n: Int) = if (n > 10) Some(n) else None
+
+    overTen(11).map(_ * 2).getOrElse(0) should be(22)
+    overTen(5).map(_ * 2).getOrElse(0) should be(0)
   }
-  */
+
+  "The orElse function" should "return a new Option value" in {
+    def overTen(n: Int) = if (n > 10) Some(n) else None
+
+    overTen(11).map(_ * 2).orElse(Some(0)) should be(Some(22))
+    overTen(5).map(_ * 2).getOrElse(Some(0)) should be(Some(0))
+  }
 
 
 }

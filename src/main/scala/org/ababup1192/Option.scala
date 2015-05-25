@@ -19,6 +19,10 @@ sealed trait Option[+A] {
       case None => default
     }
   }
+
+  def orElse[B >: A](ob: => Option[B]): Option[B] = {
+    this.map(Some(_)).getOrElse(ob)
+  }
 }
 
 case class Some[+A](get: A) extends Option[A]
