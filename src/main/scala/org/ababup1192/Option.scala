@@ -81,4 +81,17 @@ object Option {
     }))
   }
 
+  def parseInts(list: List[String]): Option[List[Int]] = {
+    traverse(list)(a => Try(a.toInt))
+  }
+
+  def traverse[A, B](list: List[A])(f: A => Option[B]): Option[List[B]] = {
+    Some(List.foldLeft(list, List(): List[B])((l, r) => {
+      f(r) match {
+        case None => l
+        case Some(x) => List.append(l, List(x))
+      }
+    }))
+  }
+
 }

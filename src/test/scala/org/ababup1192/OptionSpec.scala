@@ -61,6 +61,11 @@ class OptionSpec extends FlatSpec with Matchers {
     sequence(List(Some(1), Some(2), None, Some(3), None, Some(4))) should be(Some(List(1, 2, 3, 4)))
   }
 
+  "The parseInts function" should "return a new Option[List[Int]]" in {
+    parseInts(List("123", "hage", "456", "hoge")) should be(Some(List(123, 456)))
+    parseInts(List("hage", "hoge")) should be(Some(Nil))
+  }
+
 }
 
 
