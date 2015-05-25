@@ -22,8 +22,8 @@ class FuncModuleSpec extends FlatSpec with Matchers {
   }
 
   "The findFirst function" should "return Int value" in {
-    findFirst(Array("hoge", "foo", "bar"), "foo") should be(1)
-    findFirst(Array("hoge", "foo", "bar"), "huga") should be(-1)
+    findFirst(Array("hoge", "foo", "bar"), (elm: String) => elm == "foo") should be(1)
+    findFirst(Array(1, 2, 3), (elm: Int) => elm == 4) should be(-1)
   }
 
 }
