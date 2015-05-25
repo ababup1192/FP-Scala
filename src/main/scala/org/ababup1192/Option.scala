@@ -67,7 +67,10 @@ object Option {
   }
 
   def map2[A, B, C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C] = {
-    a.flatMap(va => b.map(vb => f(va, vb)))
+    for {
+      va <- a
+      vb <- b
+    } yield f(va, vb)
   }
 
   def lift[A, B](f: A => B): Option[A] => Option[B] = {
