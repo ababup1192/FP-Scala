@@ -4,6 +4,8 @@
     <list default="true" id="49086f54-f520-41d4-aa2b-85994b985348" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$USER_HOME$/.vimrc" afterPath="$USER_HOME$/.vimrc" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/.zshrc" afterPath="$USER_HOME$/.zshrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/ababup1192/FuncModuleSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/ababup1192/FuncModuleSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala" />
     </list>
     <ignored path="FP-Scala.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +22,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/FP-Scala$FuncModuleSpec.coverage" NAME="FuncModuleSpec Coverage Results" MODIFIED="1432517157469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/FP-Scala$FuncModuleSpec.coverage" NAME="FuncModuleSpec Coverage Results" MODIFIED="1432517327358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/FP-Scala$ListSpec.coverage" NAME="ListSpec Coverage Results" MODIFIED="1432517152454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/FP-Scala$TreeSpec.coverage" NAME="TreeSpec Coverage Results" MODIFIED="1432516733698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
@@ -43,21 +45,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FuncModule.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/FuncModule.scala">
+      <file leaf-file-name="List.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.15923567">
+              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FuncModuleSpec.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FuncModule.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/FuncModule.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FuncModuleSpec.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/FuncModuleSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.477707">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#24#58#0" expanded="true" />
               </folding>
@@ -105,12 +117,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/scala/ababup1192/List.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/HelloSpec.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/Tree.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/TreeSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/ListSpec.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/FuncModule.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/FuncModuleSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/FuncModule.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala" />
       </list>
     </option>
   </component>
@@ -762,12 +774,12 @@
       <workItem from="1432335528943" duration="4334000" />
       <workItem from="1432376933317" duration="3840000" />
       <workItem from="1432433529511" duration="31585000" />
-      <workItem from="1432513646370" duration="2837000" />
+      <workItem from="1432513646370" duration="3070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46664000" />
+    <option name="totallyTimeSpent" value="46897000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -884,19 +896,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7643312">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/TreeSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/FuncModule.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/FuncModuleSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -910,21 +932,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/FuncModule.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/List.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.15923567">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/FuncModuleSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.477707">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding>
-            <element signature="e#24#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

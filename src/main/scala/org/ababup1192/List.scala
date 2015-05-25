@@ -1,5 +1,7 @@
 package org.ababup1192
 
+import scala.annotation.tailrec
+
 // ConsとNilが共存するために、Listの型パラメータを共変にする。 3.1 「変位について」トピック
 sealed trait List[+A]
 
@@ -12,7 +14,6 @@ case class Cons[+A](head: A, tail: List[A]) extends List[A]
 
 object List {
 
-
   def foldRight[A, B](list: List[A], res: B)(f: (A, B) => B): B = {
     list match {
       case Nil => res
@@ -20,6 +21,7 @@ object List {
     }
   }
 
+  @tailrec
   def foldLeft[A, B](list: List[A], res: B)(f: (B, A) => B): B = {
     list match {
       case Nil => res
@@ -95,6 +97,7 @@ object List {
     }
   }
 
+  @tailrec
   def hasSubsequence[A](sup: List[A], sub: List[A]): Boolean = {
     (sup, sub) match {
       case (Nil, Nil) => true
