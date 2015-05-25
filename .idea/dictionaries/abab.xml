@@ -2,6 +2,7 @@
   <dictionary name="abab">
     <words>
       <w>subsequence</w>
+      <w>uncurry</w>
     </words>
   </dictionary>
 </component>
