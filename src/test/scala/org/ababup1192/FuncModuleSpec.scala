@@ -15,6 +15,10 @@ class FuncModuleSpec extends FlatSpec with Matchers {
     factorial(5) should be(120)
   }
 
+  "The fib function" should "return Int value" in {
+    fib(5) should be(5)
+  }
+
 }
 
 

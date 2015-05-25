@@ -10,12 +10,20 @@ object FuncModule {
 
   def factorial(n: Int): Int = {
     @tailrec
-    def go(n: Int, acc: Int): Int = {
+    def loop(n: Int, acc: Int): Int = {
       if (n <= 0) acc
-      else go(n - 1, n * acc)
+      else loop(n - 1, n * acc)
     }
+    loop(n, 1)
+  }
 
-    go(n, 1)
+  def fib(n: Int): Int = {
+    @tailrec
+    def loop(n: Int, p: Int, c: Int): Int = {
+      if (n == 1) c
+      else loop(n - 1, c, p + c)
+    }
+    loop(n, 0, 1)
   }
 
 }
