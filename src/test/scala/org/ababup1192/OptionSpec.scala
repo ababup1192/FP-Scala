@@ -38,6 +38,13 @@ class OptionSpec extends FlatSpec with Matchers {
     overTen(5).map(_ * 2).getOrElse(Some(0)) should be(Some(0))
   }
 
+  "The filter function" should "return a new Option value" in {
+    def overTen(n: Int) = if (n > 10) Some(n) else None
+
+    overTen(12).map(_ * 3).filter(_ % 2 == 0) should be(Some(36))
+    overTen(11).map(_ * 3).filter(_ % 2 == 0) should be(None)
+  }
+
 
 }
 
