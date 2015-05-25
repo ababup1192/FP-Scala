@@ -20,7 +20,7 @@ object FuncModule {
   def fib(n: Int): Int = {
     @tailrec
     def loop(n: Int, p: Int, c: Int): Int = {
-      if (n == 1) c
+      if (n < 1) p
       else loop(n - 1, c, p + c)
     }
     loop(n, 0, 1)

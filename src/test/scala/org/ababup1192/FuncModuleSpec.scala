@@ -16,6 +16,8 @@ class FuncModuleSpec extends FlatSpec with Matchers {
   }
 
   "The fib function" should "return Int value" in {
+    fib(0) should be(0)
+    fib(1) should be(1)
     fib(5) should be(5)
   }
 
