@@ -74,4 +74,11 @@ object Option {
     _ map f
   }
 
+  def sequence[A](list: List[Option[A]]): Option[List[A]] = {
+    Some(List.foldRight(list, List(): List[A])((l, r) => l match {
+      case None => r
+      case Some(x) => List.append(List(x), r)
+    }))
+  }
+
 }

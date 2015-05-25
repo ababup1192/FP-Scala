@@ -57,6 +57,9 @@ class OptionSpec extends FlatSpec with Matchers {
     parseInsuranceRateQuote("12", "num") should be(None)
   }
 
+  "The sequence function" should "return a new Option[List[A]] value" in {
+    sequence(List(Some(1), Some(2), None, Some(3), None, Some(4))) should be(Some(List(1, 2, 3, 4)))
+  }
 
 }
 
