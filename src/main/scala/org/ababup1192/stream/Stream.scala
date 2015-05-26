@@ -19,7 +19,10 @@ trait Stream[+A] {
   }
 
   def map[B](f: A => B): Stream[B] = {
-    foldRight(Stream.empty[B])((h, t) => Stream.cons(f(h), t))
+    Stream.unfold(this) {
+      case Cons(h, t) => Some((f(h()), t()))
+      case _ => None
+    }
   }
 
   def flatMap[B](f: A => Stream[B]): Stream[B] = {
@@ -35,10 +38,10 @@ trait Stream[+A] {
   }
 
   def take(n: Int): Stream[A] = {
-    this match {
-      case Cons(h, t) if n > 1 => Stream.cons(h(), t().take(n - 1))
-      case Cons(h, _) if n == 1 => Stream.cons(h(), Stream.empty)
-      case _ => Stream.empty
+    Stream.unfold((this, n)) {
+      case (Cons(h, t), 1) => Some((h(), (Stream.empty, 0)))
+      case (Cons(h, t), nn) if nn > 1 => Some((h(), (t(), nn - 1)))
+      case _ => None
     }
   }
 
@@ -88,7 +91,7 @@ object Stream {
   }
 
   def constant[A](a: A): Stream[A] = {
-    unfold(a)(s => Some((s, s)))
+    unfold(a)(_ => Some((a, a)))
   }
 
   def from(n: Int): Stream[Int] = {
