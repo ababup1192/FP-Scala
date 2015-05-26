@@ -1,5 +1,7 @@
 package org.ababup1192.stream
 
+import scala.annotation.tailrec
+
 trait Stream[+A] {
   def headOption: Option[A] = {
     this match {
@@ -17,11 +19,16 @@ trait Stream[+A] {
   }
 
   def take(n: Int): Stream[A] = {
-    def loop(n: Int, stream: Stream[A]): Stream[A] = stream match {
-      case _ if n <= 0 => Stream.empty
-      case Cons(h, t) => Stream.cons(h(), loop(n - 1, t()))
+    this match {
+      case Cons(h, t) if n > 1 => Stream.cons(h(), t().take(n - 1))
+      case Cons(h, _) if n == 1 => Stream.cons(h(), Stream.empty)
+      case _ => Stream.empty
     }
-    loop(n, this)
+  }
+
+  def drop(n: Int): Stream[A] = this match {
+    case Cons(_, t) if n > 0 => t().drop(n - 1)
+    case _ => this
   }
 
 }
