@@ -25,6 +25,14 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream(1, 2, 3).drop(-1).toList should be(List(1, 2, 3))
   }
 
+  "The dropWhile function" should "return a new Stream" in {
+    Stream(1, 2, 3, 4).dropWhile(_ < 3).toList should be(List(3, 4))
+  }
+
+  "The takeWhile function" should "return a new Stream" in {
+    Stream(1, 2, 3, 4).takeWhile(_ < 3).toList should be(List(1, 2))
+  }
+
 }
 
 

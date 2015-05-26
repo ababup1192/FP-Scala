@@ -1,7 +1,5 @@
 package org.ababup1192.stream
 
-import scala.annotation.tailrec
-
 trait Stream[+A] {
   def headOption: Option[A] = {
     this match {
@@ -30,6 +28,17 @@ trait Stream[+A] {
     case Cons(_, t) if n > 0 => t().drop(n - 1)
     case _ => this
   }
+
+  def dropWhile(p: A => Boolean): Stream[A] = this match {
+    case Cons(h, t) if p(h()) => t().dropWhile(p)
+    case _ => this
+  }
+
+  def takeWhile(p: A => Boolean): Stream[A] = this match {
+    case Cons(h, t) if p(h()) => Stream.cons(h(), t().takeWhile(p))
+    case _ => Stream.empty
+  }
+
 
 }
 
