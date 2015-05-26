@@ -2,10 +2,7 @@ package org.ababup1192.stream
 
 trait Stream[+A] {
   def headOption: Option[A] = {
-    this match {
-      case Empty => None
-      case Cons(h, t) => Some(h())
-    }
+    foldRight(None: Option[A])((h, _) => Some(h))
   }
 
   def toList: List[A] = {
