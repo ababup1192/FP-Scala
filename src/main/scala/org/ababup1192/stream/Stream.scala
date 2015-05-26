@@ -59,7 +59,10 @@ trait Stream[+A] {
   }
 
   def takeWhile(p: A => Boolean): Stream[A] = {
-    foldRight(Stream.empty[A])((h, t) => if (p(h)) Stream.cons(h, t) else Stream.empty)
+    Stream.unfold(this) {
+      case Cons(h, t) if p(h()) => Some(h(), t())
+      case _ => None
+    }
   }
 
   def forAll(p: A => Boolean): Boolean = {
