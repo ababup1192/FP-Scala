@@ -8,14 +8,22 @@ trait Stream[+A] {
     }
   }
 
-
   def toList: List[A] = {
-    def go(s: Stream[A], acc: List[A]): List[A] = s match {
-      case Cons(h, t) => go(t(), h() :: acc)
+    def loop(stream: Stream[A], acc: List[A]): List[A] = stream match {
+      case Cons(h, t) => loop(t(), h() :: acc)
       case _ => acc
     }
-    go(this, List()).reverse
+    loop(this, List()).reverse
   }
+
+  def take(n: Int): Stream[A] = {
+    def loop(n: Int, stream: Stream[A]): Stream[A] = stream match {
+      case _ if n <= 0 => Stream.empty
+      case Cons(h, t) => Stream.cons(h(), loop(n - 1, t()))
+    }
+    loop(n, this)
+  }
+
 }
 
 case object Empty extends Stream[Nothing]

@@ -9,6 +9,12 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream(1, 2, 3).toList should be(List(1, 2, 3))
   }
 
+  "The take function" should "return a new Stream" in {
+    Stream(1, 2, 3).take(2).toList should be(List(1, 2))
+    Stream(1, 2, 3).take(0).toList should be(List())
+    Stream(1, 2, 3).take(-1).toList should be(List())
+  }
+
 }
 
 
