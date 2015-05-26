@@ -29,19 +29,17 @@ trait Stream[+A] {
     case _ => this
   }
 
-  def dropWhile(p: A => Boolean): Stream[A] = this match {
-    case Cons(h, t) if p(h()) => t().dropWhile(p)
-    case _ => this
+  def dropWhile(p: A => Boolean): Stream[A] = {
+    foldRight(Stream.empty[A])((h, t) => if (p(h)) t else Stream.cons(h, t))
   }
 
-  def takeWhile(p: A => Boolean): Stream[A] = this match {
-    case Cons(h, t) if p(h()) => Stream.cons(h(), t().takeWhile(p))
-    case _ => Stream.empty
+  def takeWhile(p: A => Boolean): Stream[A] = {
+    foldRight(Stream.empty[A])((h, t) => if (p(h)) Stream.cons(h, t) else Stream.empty)
   }
 
 
   def exists(p: A => Boolean): Boolean = {
-    foldRight(false)((a, b) => p(a) || b)
+    foldRight(false)((h, t) => p(h) || t)
   }
 
   def foldRight[B](z: => B)(f: (A, => B) => B): B = this match {
