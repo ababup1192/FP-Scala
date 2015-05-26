@@ -37,6 +37,9 @@ trait Stream[+A] {
     foldRight(Stream.empty[A])((h, t) => if (p(h)) Stream.cons(h, t) else Stream.empty)
   }
 
+  def forAll(p: A => Boolean): Boolean = {
+    foldRight(true)((h, t) => p(h) && t)
+  }
 
   def exists(p: A => Boolean): Boolean = {
     foldRight(false)((h, t) => p(h) || t)

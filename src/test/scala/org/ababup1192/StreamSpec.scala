@@ -38,6 +38,12 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream(1, 3, 5, 7, 9).exists(_ % 2 != 0) should be(right = true)
   }
 
+  "The forAll function" should "return a Boolean value" in {
+    Stream(2, 4, 5, 6, 8, 10).forAll(_ % 2 == 0) should be(right = false)
+    Stream(2, 4, 6, 8, 10).forAll(_ % 2 == 0) should be(right = true)
+  }
+
+
 }
 
 
