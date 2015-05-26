@@ -17,6 +17,10 @@ trait Stream[+A] {
     foldRight(Stream.empty[B])((h, t) => Stream.cons(f(h), t))
   }
 
+  def filter(f: A => Boolean): Stream[A] = {
+    foldRight(Stream.empty[A])((h, t) => if (f(h)) Stream.cons(h, t) else t)
+  }
+
   def take(n: Int): Stream[A] = {
     this match {
       case Cons(h, t) if n > 1 => Stream.cons(h(), t().take(n - 1))
