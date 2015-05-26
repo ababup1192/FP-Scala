@@ -4,7 +4,6 @@
     <list default="true" id="49086f54-f520-41d4-aa2b-85994b985348" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$USER_HOME$/.vimrc" afterPath="$USER_HOME$/.vimrc" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/.zshrc" afterPath="$USER_HOME$/.zshrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala" />
     </list>
     <ignored path="FP-Scala.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +25,7 @@
     <SUITE FILE_PATH="coverage/FP-Scala$FuncModuleSpec.coverage" NAME="FuncModuleSpec Coverage Results" MODIFIED="1432534336160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/FP-Scala$ListSpec.coverage" NAME="ListSpec Coverage Results" MODIFIED="1432517152454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/FP-Scala$TreeSpec.coverage" NAME="TreeSpec Coverage Results" MODIFIED="1432516733698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/FP-Scala$StreamSpec.coverage" NAME="StreamSpec Coverage Results" MODIFIED="1432636105846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/FP-Scala$StreamSpec.coverage" NAME="StreamSpec Coverage Results" MODIFIED="1432637097407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/FP-Scala$ScalaTests_in__ababup1192_.coverage" NAME="ScalaTests in 'ababup1192' Coverage Results" MODIFIED="1432534523955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageOptionsProvider">
@@ -52,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.50955415">
-              <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -62,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/StreamSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+              <caret line="59" column="2" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
@@ -100,8 +99,8 @@
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/TreeSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/OptionSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/datastructure/List.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/StreamSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/StreamSpec.scala" />
       </list>
     </option>
   </component>
@@ -827,12 +826,12 @@
       <workItem from="1432433529511" duration="31585000" />
       <workItem from="1432513646370" duration="29497000" />
       <workItem from="1432597726496" duration="7092000" />
-      <workItem from="1432622299572" duration="10495000" />
+      <workItem from="1432622299572" duration="10914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90911000" />
+    <option name="totallyTimeSpent" value="91330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1062,7 +1061,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/StreamSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <caret line="59" column="2" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
@@ -1072,7 +1071,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.50955415">
-          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
           <folding />
         </state>
       </provider>

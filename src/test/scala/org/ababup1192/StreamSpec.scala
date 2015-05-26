@@ -55,6 +55,11 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream(1, 2, 3).append(Stream(4, 5, 6)).toList should be((1 to 6).toList)
   }
 
+  "The find function" should "return a Option value" in {
+    Stream(1, 2, 3).find(_ % 2 == 0) should be(Some(2))
+  }
+
+
 }
 
 

@@ -37,6 +37,10 @@ trait Stream[+A] {
     }
   }
 
+  def find(p: A => Boolean): Option[A] = {
+    filter(p).headOption
+  }
+
   def drop(n: Int): Stream[A] = this match {
     case Cons(_, t) if n > 0 => t().drop(n - 1)
     case _ => this
