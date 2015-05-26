@@ -91,4 +91,8 @@ object Stream {
     cons(a, constant(a))
   }
 
+  def from(n: Int): Stream[Int] = {
+    cons(n, from(n + 1))
+  }
+
 }

@@ -63,6 +63,10 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream.constant(1).take(4).toList should be(List(1, 1, 1, 1))
   }
 
+  "The from function" should "return an infinit Stream value" in {
+    Stream.from(3).take(4).toList should be(List(3, 4, 5, 6))
+  }
+
 
 }
 
