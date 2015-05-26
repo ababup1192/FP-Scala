@@ -73,6 +73,13 @@ trait Stream[+A] {
     foldRight(false)((h, t) => p(h) || t)
   }
 
+  def zipWith[B, C](stream: Stream[B])(f: (A, B) => C): Stream[C] = {
+    Stream.unfold((this, stream)) {
+      case (Cons(h1, t1), Cons(h2, t2)) => Some((f(h1(), h2()), (t1(), t2())))
+      case _ => None
+    }
+  }
+
 }
 
 case object Empty extends Stream[Nothing]
