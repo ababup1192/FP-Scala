@@ -14,7 +14,7 @@ trait Stream[+A] {
       case Cons(h, t) => go(t(), h() :: acc)
       case _ => acc
     }
-    go(this, List())
+    go(this, List()).reverse
   }
 }
 
