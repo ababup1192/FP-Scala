@@ -88,18 +88,17 @@ object Stream {
   }
 
   def constant[A](a: A): Stream[A] = {
-    unfold(a)(s => Some((a, s)))
+    unfold(a)(s => Some((s, s)))
   }
 
   def from(n: Int): Stream[Int] = {
-    cons(n, from(n + 1))
+    unfold(n)(s => Some((s, s + 1)))
   }
 
   def fib(n: Int): Stream[Int] = {
-    def loop(f0: Int, f1: Int): Stream[Int] = {
-      cons(f0, loop(f1, f0 + f1))
-    }
-    loop(0, 1).take(n)
+    unfold((0, 1)) {
+      case (f0, f1) => Some((f0, (f1, f0 + f1)))
+    }.take(n)
   }
 
   def unfold[A, S](z: S)(f: S => Option[(A, S)]): Stream[A] = {
