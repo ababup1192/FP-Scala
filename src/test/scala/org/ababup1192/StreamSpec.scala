@@ -59,6 +59,10 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream(1, 2, 3).find(_ % 2 == 0) should be(Some(2))
   }
 
+  "The constant function" should "return an infinit Stream value" in {
+    Stream.constant(1).take(4).toList should be(List(1, 1, 1, 1))
+  }
+
 
 }
 

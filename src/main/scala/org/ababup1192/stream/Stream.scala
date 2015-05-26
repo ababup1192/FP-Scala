@@ -13,6 +13,11 @@ trait Stream[+A] {
     loop(this, List()).reverse
   }
 
+  def foldRight[B](z: => B)(f: (A, => B) => B): B = this match {
+    case Cons(h, t) => f(h(), t().foldRight(z)(f))
+    case _ => z
+  }
+
   def map[B](f: A => B): Stream[B] = {
     foldRight(Stream.empty[B])((h, t) => Stream.cons(f(h), t))
   }
@@ -62,11 +67,6 @@ trait Stream[+A] {
     foldRight(false)((h, t) => p(h) || t)
   }
 
-  def foldRight[B](z: => B)(f: (A, => B) => B): B = this match {
-    case Cons(h, t) => f(h(), t().foldRight(z)(f))
-    case _ => z
-  }
-
 }
 
 case object Empty extends Stream[Nothing]
@@ -86,4 +86,9 @@ object Stream {
     if (as.isEmpty) empty
     else cons(as.head, apply(as.tail: _*))
   }
+
+  def constant[A](a: A): Stream[A] = {
+    cons(a, constant(a))
+  }
+
 }
