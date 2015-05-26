@@ -1,8 +1,5 @@
 package org.ababup1192.stream
 
-import org.ababup1192._
-import org.ababup1192.errorhandling.{None, Some, Option}
-
 trait Stream[+A] {
   def headOption: Option[A] = {
     this match {
@@ -11,13 +8,14 @@ trait Stream[+A] {
     }
   }
 
-  /*
+
   def toList: List[A] = {
-    this match {
-      case Empty => Nil
+    def go(s: Stream[A], acc: List[A]): List[A] = s match {
+      case Cons(h, t) => go(t(), h() :: acc)
+      case _ => acc
     }
+    go(this, List())
   }
-  */
 }
 
 case object Empty extends Stream[Nothing]
@@ -28,7 +26,7 @@ object Stream {
   def cons[A](hd: => A, tl: => Stream[A]): Stream[A] = {
     lazy val head = hd
     lazy val tail = tl
-    stream.Cons(() => head, () => tail)
+    Cons(() => head, () => tail)
   }
 
   def empty[A]: Stream[A] = Empty
