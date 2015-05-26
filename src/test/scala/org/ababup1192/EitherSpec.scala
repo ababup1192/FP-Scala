@@ -18,6 +18,20 @@ class EitherSpec extends FlatSpec with Matchers {
     }) should be(right = true)
   }
 
+  "The parseInsuranceRateQuote function" should "return a new Either[Exception, Double] value" in {
+    parseInsuranceRateQuote("12", "13") should be(Right(12 * 13 * 0.1))
+
+    (parseInsuranceRateQuote("age", "13") match {
+      case Left(_) => true
+      case Right(_) => false
+    }) should be(right = true)
+
+    (parseInsuranceRateQuote("12", "ticket") match {
+      case Left(_) => true
+      case Right(_) => false
+    }) should be(right = true)
+  }
+
 
 }
 
