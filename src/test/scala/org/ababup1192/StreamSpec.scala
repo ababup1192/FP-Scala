@@ -52,7 +52,7 @@ class StreamSpec extends FlatSpec with Matchers {
   }
 
   "The append function" should "return a Stream value" in {
-    Stream(1, 2, 3).append(Stream(4,5,6)).toList should be((1 to 6).toList)
+    Stream(1, 2, 3).append(Stream(4, 5, 6)).toList should be((1 to 6).toList)
   }
 
 }

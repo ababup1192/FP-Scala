@@ -17,6 +17,10 @@ trait Stream[+A] {
     foldRight(Stream.empty[B])((h, t) => Stream.cons(f(h), t))
   }
 
+  def flatMap[B](f: A => Stream[B]): Stream[B] = {
+    foldRight(Stream.empty[B])((h, t) => f(h).append(t))
+  }
+
   def filter(f: A => Boolean): Stream[A] = {
     foldRight(Stream.empty[A])((h, t) => if (f(h)) Stream.cons(h, t) else t)
   }

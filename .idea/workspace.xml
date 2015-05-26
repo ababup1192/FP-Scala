@@ -4,6 +4,7 @@
     <list default="true" id="49086f54-f520-41d4-aa2b-85994b985348" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$USER_HOME$/.vimrc" afterPath="$USER_HOME$/.vimrc" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/.zshrc" afterPath="$USER_HOME$/.zshrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala" />
     </list>
     <ignored path="FP-Scala.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,20 +48,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Stream.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Stream.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.50955415">
+              <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StreamSpec.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StreamSpec.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/StreamSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.89171976">
+            <state vertical-scroll-proportion="0.0">
               <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
@@ -99,8 +100,8 @@
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/TreeSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/OptionSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/datastructure/List.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/ababup1192/StreamSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala" />
       </list>
     </option>
   </component>
@@ -826,12 +827,12 @@
       <workItem from="1432433529511" duration="31585000" />
       <workItem from="1432513646370" duration="29497000" />
       <workItem from="1432597726496" duration="7092000" />
-      <workItem from="1432622299572" duration="10114000" />
+      <workItem from="1432622299572" duration="10495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90530000" />
+    <option name="totallyTimeSpent" value="90911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1058,21 +1059,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/ababup1192/StreamSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89171976">
+        <state vertical-scroll-proportion="0.0">
           <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/ababup1192/stream/Stream.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50955415">
+          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
