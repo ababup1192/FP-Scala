@@ -1,4 +1,6 @@
-package org.ababup1192
+package org.ababup1192.errorhandling
+
+import org.ababup1192.datastructure
 
 
 sealed trait Option[+A] {
@@ -77,22 +79,22 @@ object Option {
     _ map f
   }
 
-  def sequence[A](list: List[Option[A]]): Option[List[A]] = {
-    Some(List.foldLeft(list, List(): List[A])((l, r) => r match {
+  def sequence[A](list: datastructure.List[Option[A]]): Option[datastructure.List[A]] = {
+    Some(datastructure.List.foldLeft(list, datastructure.List(): datastructure.List[A])((l, r) => r match {
       case None => l
-      case Some(x) => List.append(l, List(x))
+      case Some(x) => datastructure.List.append(l, datastructure.List(x))
     }))
   }
 
-  def parseInts(list: List[String]): Option[List[Int]] = {
+  def parseInts(list: datastructure.List[String]): Option[datastructure.List[Int]] = {
     traverse(list)(a => Try(a.toInt))
   }
 
-  def traverse[A, B](list: List[A])(f: A => Option[B]): Option[List[B]] = {
-    Some(List.foldLeft(list, List(): List[B])((l, r) => {
+  def traverse[A, B](list: datastructure.List[A])(f: A => Option[B]): Option[datastructure.List[B]] = {
+    Some(datastructure.List.foldLeft(list, datastructure.List(): datastructure.List[B])((l, r) => {
       f(r) match {
         case None => l
-        case Some(x) => List.append(l, List(x))
+        case Some(x) => datastructure.List.append(l, datastructure.List(x))
       }
     }))
   }

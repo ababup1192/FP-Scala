@@ -1,4 +1,4 @@
-package org.ababup1192
+package org.ababup1192.errorhandling
 
 sealed trait Either[+E, +A] {
   def map[B](f: A => B): Either[E, B] = {

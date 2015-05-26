@@ -1,4 +1,4 @@
-package org.ababup1192
+package org.ababup1192.datastructure
 
 sealed trait Tree[+A] {
 

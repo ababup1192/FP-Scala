@@ -1,5 +1,6 @@
 package org.ababup1192
 
+import org.ababup1192.datastructure._
 import org.scalatest._
 
 class TreeSpec extends FlatSpec with Matchers {

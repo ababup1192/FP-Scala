@@ -1,4 +1,6 @@
-package org.ababup1192
+package org.ababup1192.datastructure
+
+import org.ababup1192.stream
 
 import scala.annotation.tailrec
 

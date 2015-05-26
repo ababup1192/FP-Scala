@@ -1,6 +1,7 @@
 package org.ababup1192
 
-import org.ababup1192.Option._
+import org.ababup1192.errorhandling._
+import org.ababup1192.errorhandling.Option._
 import org.scalatest._
 
 class OptionSpec extends FlatSpec with Matchers {
@@ -58,12 +59,12 @@ class OptionSpec extends FlatSpec with Matchers {
   }
 
   "The sequence function" should "return a new Option[List[A]] value" in {
-    sequence(List(Some(1), Some(2), None, Some(3), None, Some(4))) should be(Some(List(1, 2, 3, 4)))
+    sequence(datastructure.List(Some(1), Some(2), None, Some(3), None, Some(4))) should be(Some(datastructure.List(1, 2, 3, 4)))
   }
 
   "The parseInts function" should "return a new Option[List[Int]]" in {
-    parseInts(List("123", "hage", "456", "hoge")) should be(Some(List(123, 456)))
-    parseInts(List("hage", "hoge")) should be(Some(Nil))
+    parseInts(datastructure.List("123", "hage", "456", "hoge")) should be(Some(datastructure.List(123, 456)))
+    parseInts(datastructure.List("hage", "hoge")) should be(Some(Nil))
   }
 
 }
