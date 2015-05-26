@@ -95,4 +95,11 @@ object Stream {
     cons(n, from(n + 1))
   }
 
+  def fib(n: Int): Stream[Int] = {
+    def loop(f0: Int, f1: Int): Stream[Int] = {
+      cons(f0, loop(f1, f0 + f1))
+    }
+    loop(0, 1).take(n)
+  }
+
 }
