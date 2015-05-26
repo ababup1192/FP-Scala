@@ -10,6 +10,14 @@ class EitherSpec extends FlatSpec with Matchers {
     mean(IndexedSeq()) should be(Left("mean of empty list!"))
   }
 
+  "The safeDiv function" should "return Either[Exception, Int] value" in {
+    safeDiv(4, 2) should be(Right(2))
+    (safeDiv(4, 0) match {
+      case Left(_) => true
+      case Right(_) => false
+    }) should be(right = true)
+  }
+
 
 }
 

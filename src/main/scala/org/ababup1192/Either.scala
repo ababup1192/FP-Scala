@@ -16,4 +16,13 @@ object Either {
       Right(xs.sum / xs.length)
   }
 
+  def safeDiv(x: Int, y: Int): Either[Exception, Int] = {
+    try {
+      Right(x / y)
+    } catch {
+      case e: Exception => Left(e)
+    }
+
+  }
+
 }
