@@ -43,6 +43,9 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream(2, 4, 6, 8, 10).forAll(_ % 2 == 0) should be(right = true)
   }
 
+  "The map function" should "return a Stream value" in {
+    Stream(1, 2, 3, 4).map(_ * 2).toList should be(List(2, 4, 6, 8))
+  }
 
 }
 

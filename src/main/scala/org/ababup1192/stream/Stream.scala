@@ -13,6 +13,10 @@ trait Stream[+A] {
     loop(this, List()).reverse
   }
 
+  def map[B](f: A => B): Stream[B] = {
+    foldRight(Stream.empty[B])((h, t) => Stream.cons(f(h), t))
+  }
+
   def take(n: Int): Stream[A] = {
     this match {
       case Cons(h, t) if n > 1 => Stream.cons(h(), t().take(n - 1))
