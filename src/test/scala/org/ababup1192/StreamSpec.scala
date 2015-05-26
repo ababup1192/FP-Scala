@@ -33,6 +33,11 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream(1, 2, 3, 4).takeWhile(_ < 3).toList should be(List(1, 2))
   }
 
+  "The empty function" should "return a Boolean value" in {
+    Stream(1, 3, 5, 7, 9).exists(_ % 2 == 0) should be(right = false)
+    Stream(1, 3, 5, 7, 9).exists(_ % 2 != 0) should be(right = true)
+  }
+
 }
 
 
