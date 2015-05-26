@@ -21,6 +21,10 @@ trait Stream[+A] {
     foldRight(Stream.empty[A])((h, t) => if (f(h)) Stream.cons(h, t) else t)
   }
 
+  def append[B >: A](stream: => Stream[B]): Stream[B] = {
+    foldRight(stream)((h, t) => Stream.cons(h, t))
+  }
+
   def take(n: Int): Stream[A] = {
     this match {
       case Cons(h, t) if n > 1 => Stream.cons(h(), t().take(n - 1))

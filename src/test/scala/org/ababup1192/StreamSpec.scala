@@ -51,6 +51,10 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream(1, 2, 3, 4, 5, 6).filter(_ % 2 == 0).toList should be(List(2, 4, 6))
   }
 
+  "The append function" should "return a Stream value" in {
+    Stream(1, 2, 3).append(Stream(4,5,6)).toList should be((1 to 6).toList)
+  }
+
 }
 
 
