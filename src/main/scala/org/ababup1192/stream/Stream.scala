@@ -88,7 +88,7 @@ object Stream {
   }
 
   def constant[A](a: A): Stream[A] = {
-    cons(a, constant(a))
+    unfold(a)(s => Some((a, s)))
   }
 
   def from(n: Int): Stream[Int] = {
@@ -100,6 +100,13 @@ object Stream {
       cons(f0, loop(f1, f0 + f1))
     }
     loop(0, 1).take(n)
+  }
+
+  def unfold[A, S](z: S)(f: S => Option[(A, S)]): Stream[A] = {
+    f(z) match {
+      case Some((a, s)) => cons(a, unfold(s)(f))
+      case None => empty
+    }
   }
 
 }
