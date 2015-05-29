@@ -1,7 +1,5 @@
 package org.ababup1192.datastructure
 
-import org.ababup1192.stream
-
 import scala.annotation.tailrec
 
 // ConsとNilが共存するために、Listの型パラメータを共変にする。 3.1 「変位について」トピック

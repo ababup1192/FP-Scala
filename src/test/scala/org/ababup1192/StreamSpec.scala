@@ -71,6 +71,11 @@ class StreamSpec extends FlatSpec with Matchers {
     Stream.fib(6).toList should be(List(0, 1, 1, 2, 3, 5))
   }
 
+  "The zipAll function" should "return an infinite Stream value" in {
+    Stream(1, 2, 3).zipAll(Stream(5, 6, 7, 8)).toList should
+      be(List(Some(1) -> Some(5), Some(2) -> Some(6), Some(3) -> Some(7), None -> Some(8)))
+  }
+
 }
 
 
