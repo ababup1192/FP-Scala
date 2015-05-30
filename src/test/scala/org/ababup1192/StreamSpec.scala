@@ -76,6 +76,16 @@ class StreamSpec extends FlatSpec with Matchers {
       be(List(Some(1) -> Some(5), Some(2) -> Some(6), Some(3) -> Some(7), None -> Some(8)))
   }
 
+  "The startsWith function" should "return a boolean value" in {
+    Stream(1, 2, 3).startsWith(Stream(1, 2)) should be(right = true)
+    Stream(1, 1, 2).startsWith(Stream(1, 2)) should be(right = false)
+  }
+
+  "The tails function" should "return a Stream[Stream]] value" in {
+    Stream(1, 2, 3).tails.toList.map(_.toList) should be(List(
+      List(1, 2, 3), List(2, 3), List(3), List()))
+  }
+
 }
 
 
