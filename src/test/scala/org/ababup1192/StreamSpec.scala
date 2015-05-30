@@ -86,6 +86,12 @@ class StreamSpec extends FlatSpec with Matchers {
       List(1, 2, 3), List(2, 3), List(3), List()))
   }
 
+  "The hasSubsequence function" should "return a Boolean value" in {
+    Stream(1, 1, 2, 3, 4).hasSubsequence(Stream(1, 2)) should be(right = true)
+    Stream(1, 1, 3, 4).hasSubsequence(Stream(1, 4)) should be(right = false)
+  }
+
+
 }
 
 

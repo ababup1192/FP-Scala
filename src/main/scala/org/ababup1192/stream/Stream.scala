@@ -104,6 +104,10 @@ trait Stream[+A] {
     } append Stream(Stream.empty)
   }
 
+  def hasSubsequence[B](s: Stream[B]): Boolean = {
+    tails exists (_ startsWith s)
+  }
+
 }
 
 case object Empty extends Stream[Nothing]
